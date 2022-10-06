@@ -1,0 +1,29 @@
+{% extends 'generator/layout.html' %}
+{% block content %}
+<div class="col-md-4-offset-md-4">
+    <form action="{% url "contra" %}" class="card card-body p-5" style="background-color:black;">
+
+        <h1>Generador de contraseñas</h1>
+        <label for="longitud">Selecciona la longitud de tu contraseña:</label>
+        <select name="longitud" id="longitud">
+            <option value="6">6 Caracteres</option>
+            <option value="7">7 Caracteres</option>
+            <option value="8">8 Caracteres</option>
+            <option value="9">9 Caracteres</option>
+            <option value="10">10 Caracteres</option>
+            <option value="11">11 Caracteres</option>
+            <option value="12">12 Caracteres</option>
+            <option value="13">13 Caracteres</option>
+            <option value="14">14 Caracteres</option>
+        </select>
+    
+        <label for="mayuscula">Mayuscula</label>
+        <input type="checkbox" name="mayuscula" id="mayuscula">
+        <label for="especial">Caracteres Especiales</label>
+        <input type="checkbox" name="especial" id="especial">
+        <label for="numeros">Numeros</label>
+        <input type="checkbox" name="numeros" id="numeros">
+        <button>Generar Contraseña</button>
+    </form>
+</div>
+{%endblock%}
